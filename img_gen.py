@@ -21,9 +21,10 @@ def collage():
         for n, item in zip(range(0, 1100, 100), f_list[idx-10:idx]):
             with Image.open(item) as file: 
                 im.paste(file,(n, row))   
-    im.show()
+    im.save('output/' + f_name + '.jpg')
 
 
 
 if __name__ == '__main__':
-    collage()
+    for i in range(1, 11):
+        collage(f_name=str(i))
