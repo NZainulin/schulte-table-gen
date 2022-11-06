@@ -20,8 +20,7 @@ def collage():
     for row, idx in zip(row_list, idx_list) :
         for n, item in zip(range(0, 1100, 100), f_list[idx-10:idx]):
             with Image.open(item) as file: 
-                im.paste(file,(n, row))
-    #im.paste(f_list[1],(100, 0))
+                im.paste(file,(n, row))   
     im.show()
 
 
