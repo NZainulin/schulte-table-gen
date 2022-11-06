@@ -11,8 +11,7 @@ def collage(f_name: str):
     im = Image.new('RGB', (1000, 1000), 'black')    
 
     f_list = glob.glob('images/*.jpg')
-    random.shuffle(f_list)
-    #print(f_list[:4])
+    random.shuffle(f_list)   
     
     idx_list = range(10, 110, 10)
     row_list = range(0, 1000, 100)
@@ -22,7 +21,6 @@ def collage(f_name: str):
             with Image.open(item) as file: 
                 im.paste(file,(n, row))   
     im.save('output/' + f_name + '.jpg')
-
 
 
 if __name__ == '__main__':
