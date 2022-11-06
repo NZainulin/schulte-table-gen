@@ -3,7 +3,7 @@ import os
 import glob
 import random
 
-def collage():
+def collage(f_name: str):
     if not os.path.isdir('images'):
         print('You need to generate images')
         return
